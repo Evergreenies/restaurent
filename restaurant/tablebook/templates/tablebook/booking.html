@@ -1,0 +1,144 @@
+{% extends 'tablebook/tablebook.html' %}
+{% load staticfiles %}
+{% load static %}
+
+{% block title %}Restaurant - Book Table{% endblock %}
+
+{% block link %}
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
+    <script language="javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.sound.js"></script>
+
+    <script src="{% static 'js/vanilla.js' %}"></script>
+    <script src="{% static 'js/booking.js' %}"></script>
+    <script src="{% static 'css/bookin1.css' %}"></script>
+
+{% endblock %}
+
+{% block body %}
+
+
+    <!-- Jumbotron -->
+    <div class="container-fluid">
+        <div class="row jumbotron">
+            <div class="col-xs-12 col-sm-12 col-md-9  col-lg-9 col-xl-10 ">
+                <p>Do you have to create table for you? Just click on <b>Create Table!</b></p>
+                <p>Do you want to book a table? Just click on cards given below.</p>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3  col-xl-2 ">
+                <button type="button" class="btn btn-outline-secondary-btn-lg" >Create Table...</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container padding">
+        <div class="row text-center padding">
+            <div class="card-deck">
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show1"  onclick="countDown8(3600, 'show1')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">1</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show2"  onclick="countDown8(3600, 'show2')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">2</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show3"  onclick="countDown8(3600, 'show3')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">3</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show4"  onclick="countDown8(3600, 'show4')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">4</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show5"  onclick="countDown8(3600, 'show5')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">5</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show6"  onclick="countDown8(3600, 'show6')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">6</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3" id="show7"  onclick="countDown8(3600, 'show7')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">7</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block">
+                            <p ><button type="button" class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-3 show1" id="show8"  onclick="countDown8(3600, 'show8')">
+                    <div class="card box shadow">
+                        <img src="/static/tablebook/images/table1.png" alt="" class="card-img-top img-fluid cards-size">
+                        <div class="card-img-overlay">
+                            <h2 class=" card-title display-4">8</h2>
+                        </div>
+                        <hr>
+                        <div class="card-block " id="button">
+                            <p class="card-title"  ><button  class="btn btn-primary" >Book</button></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
